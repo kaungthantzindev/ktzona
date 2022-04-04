@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../components/Navbar";
@@ -18,6 +19,11 @@ const Cart = () => {
   return (
     <>
       <Navbar />
+      <Head>
+        <title>Cart Page</title>
+        <meta name="description" content="shopping cart application" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="py-20">
         <h1 className="text-center p-2 lg:text-5xl md:text-4xl text-3xl text-rose-500 font-semibold">{items.length === 0 ? 'your cart is empty' : 'Your Cart'}</h1>
         <h1 className="text-center p-2 lg:text-5xl md:text-4xl text-3xl text-teal-600 font-bold">{message}</h1>

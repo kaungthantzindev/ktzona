@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import ProductItem from '../components/Products/ProductItem';
 
@@ -6,6 +7,11 @@ const Products = ({ product }) => {
     return (
         <>
             <Navbar />
+            <Head>
+                <title>Products page</title>
+                <meta name="description" content="shopping cart application" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className='py-24 bg-gray-100'>
                 <h1 className='lg:text-5xl py-3 text-center md:text-4xl text-3xl text-rose-500'>
                     Our<span className='font-bold'>Products</span>
